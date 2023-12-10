@@ -9,7 +9,7 @@ struct MainMenuViewModel {
     private let model = MainMenuModel()
     
     func getMenuItems() -> [MenuRowModel] {
-        model.menuItems.map { .init(title: $0.title) }
+        model.menuItems.enumerated().map { .init(title: "\($0.offset + 1). \($0.element.title)") }
     }
     
     func getMenuItem(by index: Int) -> MainMenuItem {
