@@ -10,6 +10,7 @@ import UIKit
 enum MainMenuItem: CaseIterable {
     case drawing
     case synchronousDrawing
+    case tree
 }
 
 extension MainMenuItem {
@@ -19,6 +20,8 @@ extension MainMenuItem {
             return "Drawing"
         case .synchronousDrawing:
             return "Synchronous Drawing"
+        case .tree:
+            return "Tree"
         }
     }
     
@@ -28,6 +31,8 @@ extension MainMenuItem {
             return DrawingViewController()
         case .synchronousDrawing:
             return SynchronousDrawingViewController()
+        case .tree:
+            return TreeViewController()
         }
     }
 }
